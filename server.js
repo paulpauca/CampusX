@@ -18,6 +18,10 @@ function responder(req, res) {
   console.log('got a request');
 };
 
+app.get('/about', (req, res) => {
+  res.sendFile(__dirname + '/about.html');
+});
+
 // Get request to / is given to responder function
 app.get('/', responder);
 
